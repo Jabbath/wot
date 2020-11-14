@@ -250,6 +250,10 @@ def plot_tetrahedron(fate_ds, name1, name2, name3, day,
     plt.axis('off')
     plt.title('{} vs. {} vs. {} on day {}'.format(name1, name2, name3, day))
     plt.tight_layout()
+    
+    #Optionally save the figure
+    if filename is not None:
+        plt.savefig(filename)
         
 def plot_log_odds(fate_ds, name1, name2, filename=None):
     """
