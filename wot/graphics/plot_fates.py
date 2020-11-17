@@ -36,7 +36,7 @@ class Fate_Plotter():
             The name of the file to save the plot as. None to skip saving.
         """
 
-        figure = plt.figure(figsize=(10, 10))   
+        figure = plt.figure(figsize=(8, 8))   
 
         #Get the fates for our two cell populations
         fate1 = self.fate_ds[:,name1][self.fate_ds.obs['day']==day].X.flatten()
@@ -133,7 +133,7 @@ class Fate_Plotter():
         plt.close()
 
         # Create the plot and set axes settings
-        fig = plt.figure(figsize=(8,8))
+        fig = plt.figure(figsize=(8, 8))
         ax = fig.add_subplot(111, projection='3d')
 
         # Plot the cells
@@ -181,7 +181,7 @@ class Fate_Plotter():
         filename: str, optional
             The name of the file to save the plot as. None to skip saving.
         """
-        figure = plt.figure(figsize=(10, 10))
+        figure = plt.figure(figsize=(8, 8))
 
         #Extract the fate probabilities for the two cell populations
         fate1 = self.fate_ds[:, name1].X
